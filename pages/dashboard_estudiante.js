@@ -123,18 +123,11 @@ const DashboardEstudiante = () => {
             <button
               key={dominio.id}
               className={`bg-pink-500 text-white px-4 py-2 rounded-md m-2 flex items-center justify-center w-80 ${
-                (index === 0 && usuarioAvance[dominio.id] !== 10) || (usuarioAvance[dominios[index - 1]?.id] === 10 && usuarioAvance[dominio.id] !== 10) ? 'cursor-pointer' : 'cursor-not-allowed'
+                (index === 0 && usuarioAvance[dominio.id] !== 10) || (usuarioAvance[dominios[index - 1]?.id] === 10 && usuarioAvance[dominio.id] !== 10) ? 'cursor-pointer' : 'cursor-pointer'
               }`}
               onClick={() => {
-                // Verifica si el avance es 0 y realiza acciones en consecuencia
-                if ((index === 0 && usuarioAvance[dominio.id] !== 10) || (usuarioAvance[dominios[index - 1]?.id] === 10 && usuarioAvance[dominio.id] !== 10)) {
-                  // Realiza acciones cuando se hace clic en un botón con avance permitido
                   console.log(`Hiciste clic en el dominio ${dominio.id}`);
                   window.location.href = `/tareasdom${dominio.id}?user=${encodeURIComponent(JSON.stringify(usuario))}`;
-                } else {
-                  // Realiza acciones cuando se hace clic en un botón con avance no permitido
-                  console.log(`No puedes hacer clic en el dominio ${dominio.id}`);
-                }
               }}
             >
               {dominio.titulo}

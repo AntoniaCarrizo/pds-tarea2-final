@@ -43,7 +43,6 @@ const Plantilla1Dom1 = () => {
     ],
   });
 
-  // Definir los hints
   const hints = [
     'Puedes calcular la velocidad utilizando la fórmula de una onda, que relaciona la velocidad, la longitud de onda y la frecuencia.',
     'Puedes calcular la velocidad utilizando la fórmula de una onda, que relaciona la velocidad, la longitud de onda y la frecuencia.',
@@ -51,7 +50,6 @@ const Plantilla1Dom1 = () => {
     'La formula que relaciona las 3 variables es  λ = v / f,'
   ];
 
-  // Estado para rastrear el índice del hint actual
   const [hintIndex, setHintIndex] = useState(0);
 
   const generateRandomProperty = () => {
@@ -114,16 +112,16 @@ const Plantilla1Dom1 = () => {
     if (Math.abs(userAnswerFloat - correctAnswerFloat) < epsilon) {
       correct = true;
       setShowSubmitButton(false);
-      setShowNextTaskButton(true);
+      localStorage.setItem('resultados', JSON.stringify('incorrecto'));
+      localStorage.setItem('ultimaTarea', 'calculo');
+      localStorage.setItem('cambio', 'si');
     } else {
-      // Respuesta incorrecta, mostrar el siguiente hint
       setHintIndex(hintIndex + 1);
     }
 
     setIsCorrect(correct);
   };
 
-  // Restablecer el índice del hint al generar nuevos valores
   useEffect(() => {
     setHintIndex(0);
     generateRandomProperty();
@@ -150,7 +148,6 @@ const Plantilla1Dom1 = () => {
   }
 
   const renderHint = () => {
-    // Mostrar el hint correspondiente al índice actual
     const hintToShow = hints[hintIndex];
 
     return (
@@ -162,12 +159,19 @@ const Plantilla1Dom1 = () => {
     );
   };
 
-  // ...
-
   return (
     <div className="min-h-screen bg-green-100 flex flex-col items-center justify-center">
       <h1 className="text-3xl font-semibold mb-4 text-blue-800">✏️ Pregunta de cálculo ✏️</h1>
+      <h3 className=" font-semibold mb-4 text-blue-800">Triángulo de relación</h3>
+      <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
 
+  <line x1="50" y1="180" x2="150" y2="180" stroke="black" />
+  <line x1="50" y1="40" x2="50" y2="180" stroke="black" />
+  <line x1="50" y1="40" x2="150" y2="180" stroke="black" />
+  {property !== 2 && <text x="100" y="200">f</text>}
+  {property !== 0 && <text x="30" y="100">v</text>}
+  {property !== 1 && <text x="110" y="110">λ</text>}
+</svg>
       <div className="mt-4">
         <Scatter
           data={chartData}

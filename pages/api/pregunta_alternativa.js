@@ -1,10 +1,9 @@
-f
-
 export default async function handler(req, res) {
   if (req.method === 'GET') {
     try {
+      
       const preguntaId = req.query.id; // Obtener el ID de la pregunta desde la URL
-
+      console.log("preguntaID")
       // Verificar que se proporcione el ID de la pregunta
       if (!preguntaId) {
         return res.status(400).json({ success: false, error: 'ID de pregunta faltante' });

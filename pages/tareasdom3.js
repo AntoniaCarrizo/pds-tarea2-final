@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
 import Alternativas from './plantillas/alternativas'; // Importa el componente de Alternativas
-import Plantilla1Dom1 from './plantillas/plantilla1-dom1'; // Importa la primera plantilla
-import Plantilla2Dom1 from './plantillas/plantilla2-dom1'; // Importa la segunda plantilla
+import Plantilla1Dom3 from './plantillas/plantilla1-dom3'; // Importa la primera plantilla
+import Plantilla2Dom3 from './plantillas/plantilla2-dom3'; // Importa la segunda plantilla
 
   
 // Estilos CSS para la barra de progreso
@@ -20,7 +20,7 @@ const filledProgressBarStyles = {
   borderRadius: '10px',
 };
 
-const TareasDom1 = () => {
+const TareasDom3 = () => {
   // Estado para controlar si se muestra el contenido de Alternativas
   const [mostrarAlternativas, setMostrarAlternativas] = useState(false); // Cambia a false inicialmente
   const [generarValorAleatorio, SetgenerarValorAleatorio] = useState(0);
@@ -75,7 +75,7 @@ const TareasDom1 = () => {
 
   // Función para generar una plantilla aleatoria
   const obtenerPlantillaAleatoria = () => {
-    const plantillas = [Plantilla1Dom1, Plantilla2Dom1];
+    const plantillas = [Plantilla1Dom3, Plantilla2Dom3];
     const indiceAleatorio = Math.floor(Math.random() * plantillas.length);
     return plantillas[indiceAleatorio];
   };
@@ -145,7 +145,7 @@ const TareasDom1 = () => {
         <h2 className="flex items-center">
           <FontAwesomeIcon icon={faBook} className="mr-2" />
           <span className="text-xl font-semibold">
-            Tema: Características de las ondas (rapidez, longitud de onda y frecuencia)
+            Tema: Ondas sonoras
           </span>
         </h2>
         {/* Muestra el nombre del usuario si está disponible en la URL */}
@@ -170,7 +170,7 @@ const TareasDom1 = () => {
       </div>
 
       {/* Mostrar el contenido de Alternativas.js si mostrarAlternativas es true */}
-      {mostrarAlternativas && <Alternativas datos={{ dominio: 1, avance: usuarioDeURL.avance, numeroPreguntas: limitePreguntas }} />}
+      {mostrarAlternativas && <Alternativas datos={{ dominio: 3, avance: usuarioDeURL.avance, numeroPreguntas: limitePreguntas }} />}
 
       {/* Mostrar la plantilla aleatoria si mostrarPlantillaAleatoria es true */}
       {PlantillaAleatoria}
@@ -179,7 +179,7 @@ const TareasDom1 = () => {
       {mostrarPlantillaAleatoria ? (
         
         // Muestra Plantilla1Dom1 si el valor aleatorio es menor que 0.5, de lo contrario, muestra Plantilla2Dom2
-        generarValorAleatorio < 0.5 ? <Plantilla1Dom1 /> : <Plantilla2Dom1 />
+        generarValorAleatorio < 0.5 ? <Plantilla1Dom3 /> : <Plantilla2Dom3 />
       ) : null}
 
 
@@ -197,4 +197,4 @@ const TareasDom1 = () => {
   );
 };
 
-export default TareasDom1;
+export default TareasDom3;
