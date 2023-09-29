@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLock, faLockOpen } from '@fortawesome/free-solid-svg-icons';
-import { useUser } from './usercontext'; // Importa useUser desde el contexto de usuario
-
 
 const DashboardEstudiante = () => {
   const [estudianteUsername, setEstudianteUsername] = useState('');

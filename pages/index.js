@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import Cookies from 'js-cookie'; 
-import { UserProvider } from './usercontext';
-import ReactDOM from 'react-dom';
-import App from './_app'; // Asegúrate de que esta importación sea correcta
 
 
 const IndexPage = () => {

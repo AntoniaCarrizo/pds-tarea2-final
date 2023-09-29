@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
-import { useUser } from './usercontext';
 
 const TareasDom1 = () => {
   // Obtén el usuario del contexto
-  const { usuario } = useUser();
   // Estado para almacenar el usuario de la URL
   const [usuarioDeURL, setUsuarioDeURL] = useState(null);
 
