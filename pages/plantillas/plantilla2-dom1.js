@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-
+import React from 'react';
 const Plantilla2Dom1 = () => {
   const [userWavelength, setUserWavelength] = useState('');
   const [userDistance, setUserDistance] = useState('');

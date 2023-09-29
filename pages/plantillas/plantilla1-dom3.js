@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 const Plantilla1Dom3 = () => {
   const [property, setProperty] = useState(0); 
   const [variable1, setVariable1] = useState(0); 

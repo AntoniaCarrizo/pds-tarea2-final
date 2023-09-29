@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Chart from 'chart.js/auto';
-
+import React from 'react';
 const Plantilla2Dom2 = () => {
   const [property, setProperty] = useState(0); 
   const [variable1, setVariable1] = useState(0);

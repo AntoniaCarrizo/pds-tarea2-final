@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 const Plantilla2Dom4 = () => {
   const [userAnswer, setUserAnswer] = useState('');
   const [isCorrect, setIsCorrect] = useState(null);

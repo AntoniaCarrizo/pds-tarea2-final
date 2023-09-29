@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Scatter } from 'react-chartjs-2';
 import Modal from 'react-modal';
 import Chart from 'chart.js/auto';
+import React from 'react';
 
 
 const Plantilla1Dom1 = () => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Cookies from 'js-cookie'; 
-
+import React from 'react';
 
 const IndexPage = () => {
   const [showProfesorForm, setShowProfesorForm] = useState(false);

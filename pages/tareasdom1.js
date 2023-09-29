@@ -4,7 +4,7 @@ import { faBook } from '@fortawesome/free-solid-svg-icons';
 import Alternativas from './plantillas/alternativas'; // Importa el componente de Alternativas
 import Plantilla1Dom1 from './plantillas/plantilla1-dom1'; // Importa la primera plantilla
 import Plantilla2Dom1 from './plantillas/plantilla2-dom1'; // Importa la segunda plantilla
-
+import React from 'react';
   
 // Estilos CSS para la barra de progreso
 const progressBarStyles = {

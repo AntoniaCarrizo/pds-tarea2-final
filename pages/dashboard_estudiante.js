@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
-
+import React from 'react';
 const DashboardEstudiante = () => {
   const [estudianteUsername, setEstudianteUsername] = useState('');
   const [usuario, setUsuario] = useState(null);
