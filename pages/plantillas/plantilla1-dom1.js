@@ -3,6 +3,7 @@ import { Scatter } from 'react-chartjs-2';
 import Modal from 'react-modal';
 import Chart from 'chart.js/auto';
 
+
 const Plantilla1Dom1 = () => {
   const [property, setProperty] = useState(0);
   const [variable1, setVariable1] = useState(0);
