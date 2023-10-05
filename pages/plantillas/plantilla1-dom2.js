@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
-import React from 'react';
 
 const Plantilla1Dom2 = () => {
   const [property, setProperty] = useState(0); 
