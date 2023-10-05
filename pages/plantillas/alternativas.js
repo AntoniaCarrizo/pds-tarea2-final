@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import React from 'react';
+
 
 const Alternativas = (props) => {
   const { dominio, numeroPreguntas } = props.datos;
