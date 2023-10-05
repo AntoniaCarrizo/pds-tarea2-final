@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
 const Alternativas = (props) => {
   const { dominio, numeroPreguntas } = props.datos;
   const [preguntas, setPreguntas] = useState([]); // Estado para almacenar la lista de preguntas
