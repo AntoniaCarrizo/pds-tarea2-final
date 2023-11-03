@@ -1,0 +1,26 @@
+/* Entrada.module.css */
+
+.container {
+    background: linear-gradient(450deg, #a4355e, #d9a2b6); /* Fondo degradado de rosado */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .header {
+    background-color: #ff69b4; /* Color de fondo del encabezado */
+    color: white; /* Color de texto del encabezado */
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .description {
+    font-style: italic;
+    font-size: 16px;
+  }
+  
+  
+  

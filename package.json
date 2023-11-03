@@ -16,7 +16,7 @@
     "chart.js": "^4.4.0",
     "date-fns": "^2.30.0",
     "js-cookie": "^3.0.5",
-    "next": "latest",
+    "next": "^14.0.1",
     "react": "latest",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "latest",
