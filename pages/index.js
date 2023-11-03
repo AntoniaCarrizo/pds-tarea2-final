@@ -91,17 +91,9 @@ Cookies.set('estudianteUsername', estudianteUsername, { expires: 7 }); // Reempl
               setShowEstudianteForm(false); // Ocultar el formulario de estudiante
             }}
           >
-            Iniciar Sesión Profesor
+            Iniciar Sesión Administrador
           </button>
-          <button
-            className="bg-green-500 text-white px-4 py-2 rounded-md"
-            onClick={() => {
-              setShowEstudianteForm(true);
-              setShowProfesorForm(false); // Ocultar el formulario de profesor
-            }}
-          >
-            Iniciar Sesión Estudiante
-          </button>
+
         </div>
         {showProfesorForm && (
           <form onSubmit={handleProfesorSubmit}>
